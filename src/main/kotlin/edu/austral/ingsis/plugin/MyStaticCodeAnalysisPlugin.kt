@@ -6,9 +6,19 @@ import org.gradle.api.tasks.TaskAction
 
 class MyStaticCodeAnalysisPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        // Apply the conventions from the gradle files
-        project.apply(mapOf("from" to "edu/austral/ingsis/plugin/main/resources/conventions/application-conventions.gradle"))
-        project.apply(mapOf("from" to "edu/austral/ingsis/plugin/main/resources/conventions/common-conventions.gradle"))
+        // Load the convention files from the plugin's resources
+        val applicationConventions = MyStaticCodeAnalysisPlugin::class.java
+            .getResource("/conventions/application-conventions.gradle")
+        val commonConventions = MyStaticCodeAnalysisPlugin::class.java
+            .getResource("/conventions/common-conventions.gradle")
+
+        // Apply the convention files to the project
+        if (applicationConventions != null && commonConventions != null) {
+            project.apply(mapOf("from" to applicationConventions))
+            project.apply(mapOf("from" to commonConventions))
+        } else {
+            throw IllegalStateException("Could not load convention files.")
+        }
 
         // Register the static analysis task
         project.tasks.register("runStaticAnalysis", StaticAnalysisTask::class.java)
