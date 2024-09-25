@@ -1,0 +1,58 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+    id 'org.jetbrains.kotlin.jvm' version '1.8.21'
+}
+
+group = 'edu.austral.ingsis'
+version = '1.0.0'
+
+gradlePlugin {
+    plugins {
+        myStaticCodeAnalysisPlugin {
+            id = 'edu.austral.ingsis.code-analysis'
+            implementationClass = 'edu.austral.ingsis.plugin.MyStaticCodeAnalysisPlugin'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+
+    // Add dependencies for static analysis tools here, e.g.:
+    // implementation 'org.some.analysis.tool:tool-core:1.0.0'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'edu.austral.ingsis'
+            artifactId = "plugin"
+            version = '1.0.0'
+
+            from(components.java)
+        }
+    }
+
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/PrintScript8/CodeAnalysis")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
+}
