@@ -15,10 +15,9 @@ class DetektPlugin : Plugin<Project> {
 
     private fun Project.configureDetekt() {
         // Specify the path to your detekt-config.yml file
-        val detektConfigFile = File("${project.rootDir}/detekt-config.yml")
+        val detektConfigFile = File("${project.rootDir}/config/detekt-config.yml")
 
         extensions.configure(DetektExtension::class.java) {
-            it.toolVersion = "1.18.1"
             it.config = files(detektConfigFile) // Use the created config file
         }
     }

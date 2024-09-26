@@ -3,6 +3,7 @@ package edu.austral.ingsis.plugin
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.plugins.quality.CheckstyleExtension
+import java.io.File
 
 class CheckStylePlugin : Plugin<Project> {
     override fun apply(target: Project) {
@@ -13,9 +14,9 @@ class CheckStylePlugin : Plugin<Project> {
     }
 
     private fun Project.configureCheckStyle() {
+        val checkStyleConfigFile = File("${project.rootDir}/config/checkstyle.xml")
         extensions.configure(CheckstyleExtension::class.java) {
-            it.toolVersion = "8.44"
-            it.config = resources.text.fromFile("checkstyle.xml")
+            it.config = resources.text.fromFile(checkStyleConfigFile)
         }
     }
 }

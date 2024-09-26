@@ -16,10 +16,8 @@ class KoverPlugin: Plugin<Project> {
 
     private fun Project.configureKover() {
         extensions.configure(DetektExtension::class.java) {
-            it.toolVersion = "1.18.1"
             it.buildUponDefaultConfig = true
-            it.config = files("${project.rootDir}/kover-config.yml") // Adjust to your config files as needed
-
+            it.config = files("${project.rootDir}/config/kover-config.yml") // Adjust to your config files as needed
         }
     }
 }
