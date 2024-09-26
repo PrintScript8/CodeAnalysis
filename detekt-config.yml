@@ -1,0 +1,33 @@
+# detekt-config.yml
+
+# General configuration
+detekt:
+  build:
+    # Specify the maximum number of issues to report
+    maxIssues: 10
+  config:
+    validation: true
+
+# Rulesets configuration
+rules:
+  # Use defaults for all rules
+  comments:
+    CommentSpacing:
+      active: true
+    MagicNumber:
+      active: true
+      ignoreNumbers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    # Customize more rules as necessary
+
+  complexity:
+    Complexity:
+      active: true
+      threshold: 10
+
+  style:
+    FinalPrivateMethod:
+      active: true
+    UnusedPrivateClass:
+      active: true
+
+  # You can add more rulesets here as needed

@@ -8,5 +8,6 @@ class PrintScriptPlugin: Plugin<Project> {
         CheckStylePlugin().apply(target)
         SpotlessPlugin().apply(target)
         DetektPlugin().apply(target)
+        KoverPlugin().apply(target)
     }
 }
