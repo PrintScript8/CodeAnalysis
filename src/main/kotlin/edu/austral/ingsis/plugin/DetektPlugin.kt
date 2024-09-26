@@ -1,9 +1,8 @@
 package edu.austral.ingsis.plugin
 
+import io.gitlab.arturbosch.detekt.extensions.DetektExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import io.gitlab.arturbosch.detekt.extensions.DetektExtension
-import java.io.File
 
 class DetektPlugin : Plugin<Project> {
     override fun apply(target: Project) {
@@ -14,11 +13,14 @@ class DetektPlugin : Plugin<Project> {
     }
 
     private fun Project.configureDetekt() {
-        // Specify the path to your detekt-config.yml file
-        val detektConfigFile = File("${project.rootDir}/config/detekt-config.yml")
-
         extensions.configure(DetektExtension::class.java) {
-            it.config = files(detektConfigFile) // Use the created config file
+            it.config.setFrom(files("config/detekt/detekt.yml")) // You can specify the YAML file location here
+            it.buildUponDefaultConfig = true
+        }
+
+        tasks.named("detekt") {
+            it.group = "verification"
+            it.description = "Run detekt code analysis."
         }
     }
 }

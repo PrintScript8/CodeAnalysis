@@ -1,23 +1,20 @@
 package edu.austral.ingsis.plugin
 
+import kotlinx.kover.gradle.plugin.dsl.KoverProjectExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import io.gitlab.arturbosch.detekt.extensions.DetektExtension
 
-class KoverPlugin: Plugin<Project> {
+class KoverPlugin : Plugin<Project> {
     override fun apply(target: Project) {
-        target.tasks.register("kover") {
-            with(target) {
-                pluginManager.apply("org.jetbrains.kotlinx")
-                configureKover()
-            }
+        with(target) {
+            pluginManager.apply("org.jetbrains.kotlinx.kover")
+            configureKover()
         }
     }
 
     private fun Project.configureKover() {
-        extensions.configure(DetektExtension::class.java) {
-            it.buildUponDefaultConfig = true
-            it.config = files("${project.rootDir}/config/kover-config.yml") // Adjust to your config files as needed
+        extensions.configure(KoverProjectExtension::class.java) {
+            it.useJacoco()  // Use JaCoCo as the coverage tool
         }
     }
 }
