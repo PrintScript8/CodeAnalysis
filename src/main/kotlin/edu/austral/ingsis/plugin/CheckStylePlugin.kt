@@ -8,13 +8,6 @@ class CheckStylePlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             pluginManager.apply("checkstyle")
-//            configureCheckStyle()
         }
     }
-
-//    private fun Project.configureCheckStyle() {
-//        tasks.withType(Checkstyle::class.java).configureEach {
-//            it.
-//        }
-//    }
 }

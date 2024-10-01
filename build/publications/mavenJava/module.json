@@ -1,0 +1,82 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "edu.austral.ingsis",
+    "module": "code-analysis-plugin",
+    "version": "1.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.8"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "code-analysis-plugin-1.0.1.jar",
+          "url": "code-analysis-plugin-1.0.1.jar",
+          "size": 4542,
+          "sha512": "7363aeceaf247ee6371b804ad1f96d43c95fac9f03fa4fb10d828fda2b820b99a286f7f189052c1e5eefa4a00329db926809755e2e90f79f1a4c8f2ad0d0fb8f",
+          "sha256": "854bea3ed5ea7c763105fa614c26936e6dc8bcff7207c6caaf46136adaeff452",
+          "sha1": "400e2570ca0b9c1d82f672211e0441273e80b9e7",
+          "md5": "a4f0d3d490bee1abdef6eb9c2766ae83"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "code-analysis-plugin-1.0.1.jar",
+          "url": "code-analysis-plugin-1.0.1.jar",
+          "size": 4542,
+          "sha512": "7363aeceaf247ee6371b804ad1f96d43c95fac9f03fa4fb10d828fda2b820b99a286f7f189052c1e5eefa4a00329db926809755e2e90f79f1a4c8f2ad0d0fb8f",
+          "sha256": "854bea3ed5ea7c763105fa614c26936e6dc8bcff7207c6caaf46136adaeff452",
+          "sha1": "400e2570ca0b9c1d82f672211e0441273e80b9e7",
+          "md5": "a4f0d3d490bee1abdef6eb9c2766ae83"
+        }
+      ]
+    }
+  ]
+}

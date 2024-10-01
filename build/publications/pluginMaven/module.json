@@ -1,0 +1,103 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "edu.austral.ingsis",
+    "module": "code-analysis",
+    "version": "1.0.22",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "code-analysis-1.0.22.jar",
+          "url": "code-analysis-1.0.22.jar",
+          "size": 7998,
+          "sha512": "678c324900dd4178010f3e772abf6eb07d58f7c40b597b5f834032c04c7e8191191f4d356a6af215518e7a2e64babd7d62b00892d898e4e783b929c2ec9cc594",
+          "sha256": "0bffab9c9260013f37c307bf419dc46fcc363915db3a8de03ecac53bb89b93ff",
+          "sha1": "66d70e04423d203f99199b2babbc21b11780d398",
+          "md5": "5f1e2dd0ded9dec56d74b4808277a9d9"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.diffplug.spotless",
+          "module": "spotless-plugin-gradle",
+          "version": {
+            "requires": "6.25.0"
+          }
+        },
+        {
+          "group": "io.gitlab.arturbosch.detekt",
+          "module": "detekt-gradle-plugin",
+          "version": {
+            "requires": "1.23.7"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kover-gradle-plugin",
+          "version": {
+            "requires": "0.8.3"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "code-analysis-1.0.22.jar",
+          "url": "code-analysis-1.0.22.jar",
+          "size": 7998,
+          "sha512": "678c324900dd4178010f3e772abf6eb07d58f7c40b597b5f834032c04c7e8191191f4d356a6af215518e7a2e64babd7d62b00892d898e4e783b929c2ec9cc594",
+          "sha256": "0bffab9c9260013f37c307bf419dc46fcc363915db3a8de03ecac53bb89b93ff",
+          "sha1": "66d70e04423d203f99199b2babbc21b11780d398",
+          "md5": "5f1e2dd0ded9dec56d74b4808277a9d9"
+        }
+      ]
+    }
+  ]
+}

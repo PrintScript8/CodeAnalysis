@@ -1,8 +1,9 @@
 package edu.austral.ingsis.plugin
 
-import kotlinx.kover.gradle.plugin.dsl.KoverProjectExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import kotlinx.kover.gradle.plugin.dsl.KoverProjectExtension
+import kotlinx.kover.gradle.plugin.dsl.CoverageUnit
 
 class KoverPlugin : Plugin<Project> {
     override fun apply(target: Project) {
@@ -13,8 +14,15 @@ class KoverPlugin : Plugin<Project> {
     }
 
     private fun Project.configureKover() {
-        extensions.configure(KoverProjectExtension::class.java) {
-            it.useJacoco()  // Use JaCoCo as the coverage tool
+        extensions.configure(KoverProjectExtension::class.java) { kover ->
+            kover.reports {
+                it.verify {
+                    it.rule {
+                        it.minBound(80, CoverageUnit.LINE)
+                    }
+                }
+            }
         }
+
     }
 }

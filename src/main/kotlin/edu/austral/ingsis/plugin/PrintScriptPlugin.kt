@@ -1,6 +1,5 @@
 package edu.austral.ingsis.plugin
 
-import kotlinx.kover.gradle.plugin.dsl.KoverProjectExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
