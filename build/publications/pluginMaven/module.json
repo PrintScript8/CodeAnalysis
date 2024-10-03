@@ -3,7 +3,7 @@
   "component": {
     "group": "edu.austral.ingsis",
     "module": "code-analysis",
-    "version": "1.0.22",
+    "version": "1.0.63",
     "attributes": {
       "org.gradle.status": "release"
     }
@@ -36,13 +36,13 @@
       ],
       "files": [
         {
-          "name": "code-analysis-1.0.22.jar",
-          "url": "code-analysis-1.0.22.jar",
-          "size": 7998,
-          "sha512": "678c324900dd4178010f3e772abf6eb07d58f7c40b597b5f834032c04c7e8191191f4d356a6af215518e7a2e64babd7d62b00892d898e4e783b929c2ec9cc594",
-          "sha256": "0bffab9c9260013f37c307bf419dc46fcc363915db3a8de03ecac53bb89b93ff",
-          "sha1": "66d70e04423d203f99199b2babbc21b11780d398",
-          "md5": "5f1e2dd0ded9dec56d74b4808277a9d9"
+          "name": "code-analysis-1.0.63.jar",
+          "url": "code-analysis-1.0.63.jar",
+          "size": 14586,
+          "sha512": "db7ffe85ee4c5aa6ce3bf41cd02ef99e7c3fe3aea40919ab9368970038113dbdfab689c585428b1c00235bf9308eec5e273fd1f08a2e4bb82fd9e4cce44326d7",
+          "sha256": "e9ff0d64e6b86287a729215a0574993031c1c13507d407fa4595a816fa19b2af",
+          "sha1": "bb581191da1e278ce86f20f5f696de8c68568212",
+          "md5": "acd041a7a2d622ee60d45ed533274689"
         }
       ]
     },
@@ -89,13 +89,13 @@
       ],
       "files": [
         {
-          "name": "code-analysis-1.0.22.jar",
-          "url": "code-analysis-1.0.22.jar",
-          "size": 7998,
-          "sha512": "678c324900dd4178010f3e772abf6eb07d58f7c40b597b5f834032c04c7e8191191f4d356a6af215518e7a2e64babd7d62b00892d898e4e783b929c2ec9cc594",
-          "sha256": "0bffab9c9260013f37c307bf419dc46fcc363915db3a8de03ecac53bb89b93ff",
-          "sha1": "66d70e04423d203f99199b2babbc21b11780d398",
-          "md5": "5f1e2dd0ded9dec56d74b4808277a9d9"
+          "name": "code-analysis-1.0.63.jar",
+          "url": "code-analysis-1.0.63.jar",
+          "size": 14586,
+          "sha512": "db7ffe85ee4c5aa6ce3bf41cd02ef99e7c3fe3aea40919ab9368970038113dbdfab689c585428b1c00235bf9308eec5e273fd1f08a2e4bb82fd9e4cce44326d7",
+          "sha256": "e9ff0d64e6b86287a729215a0574993031c1c13507d407fa4595a816fa19b2af",
+          "sha1": "bb581191da1e278ce86f20f5f696de8c68568212",
+          "md5": "acd041a7a2d622ee60d45ed533274689"
         }
       ]
     }

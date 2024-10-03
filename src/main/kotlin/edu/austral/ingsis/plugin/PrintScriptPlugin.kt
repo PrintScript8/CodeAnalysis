@@ -7,7 +7,7 @@ class PrintScriptPlugin: Plugin<Project> {
     override fun apply(target: Project) {
         DetektPlugin().apply(target)
         SpotlessPlugin().apply(target)
-        CheckStylePlugin().apply(target)
+        CustomCheckStylePlugin().apply(target)
         KoverPlugin().apply(target)
     }
 }
